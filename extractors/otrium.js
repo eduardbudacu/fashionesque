@@ -25,7 +25,7 @@ const __dirname = path.dirname(__filename);
   let response = await fetch(`https://www.otrium.nl/api/search/config`)
   let searchData = await response.json()
 
-  for(var i = 1; i <= 91; i++) {
+  for(var i = 1; i <= 95; i++) {
 
     let body = JSON.parse("{\"requests\":[{\"indexName\":\"nl_products\",\"params\":\"highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&maxValuesPerFacet=1000&hitsPerPage=1000&ruleContexts=%5B%22react_web_shop%22%2C%22category_plp%22%5D&analyticsTags=%5B%22react_web_shop%22%2C%22women%22%5D&filters=genders%3Awomen%20AND%20brand.is_private_sale%3Afalse%20AND%20is_deleted%3A%22false%22%20AND%20brand.designer_only%3Afalse&clickAnalytics=true&userToken=3538914&page=1&facets=%5B%22*%22%5D&tagFilters=&facetFilters=%5B%5B%22categories.meta%3A14096%7C%7CKleding%7C%7Ckleding%7C%7C14100%7C%7Cwomen%22%5D%5D\"},{\"indexName\":\"nl_products\",\"params\":\"highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&maxValuesPerFacet=1000&hitsPerPage=1&ruleContexts=%5B%22react_web_shop%22%2C%22category_plp%22%5D&analyticsTags=%5B%22react_web_shop%22%2C%22women%22%5D&filters=genders%3Awomen%20AND%20brand.is_private_sale%3Afalse%20AND%20is_deleted%3A%22false%22%20AND%20brand.designer_only%3Afalse&clickAnalytics=false&userToken=3538914&page=0&attributesToRetrieve=%5B%5D&attributesToHighlight=%5B%5D&attributesToSnippet=%5B%5D&tagFilters=&analytics=false&facets=categories.meta\"}]}");
     body.requests.forEach((el, index) => {
